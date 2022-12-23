@@ -18,8 +18,8 @@ When I set out to design Postak Creations, I did give it quite a bit of thought.
 What the author learned from having built Postak Creations:
 What I learned from Postak Creations has been long overdue! I’ve been interested in learning to code for a long time! I’ve just kept pushing it off and pushing it off. But now I finally learned the basics of html and CSS! And I am excited to move forward and learn other skills. So many things in my life just seem to have been pointing me in this direction. I’ve learned the proper steps of designing a website and how to put it on the internet. I’ve always had an artistic eye, so I had fun creating some of the pictures and logos! I’ve learned the amount of time it takes to create a website, although I will probably get faster at it as time goes on. The sky is now my limit!
 
- How the author will use these skills in the future: 
+How the author will use these skills in the future: 
 I know I’ve just started, but I already have about 20 different website ideas that I want to create! My first priority is building up my portfolio website so that other people can see what I can do. Who knows, it might lead me to my dream job one day. I want to be a website designer! I also want to get into web applications in the future. I have many projects and ideas from my younger years that I could solve with simply building a website or a web app. My mom is also an author, so one of my website ideas is to build her a website for her books! 
 
 Conclusion:
-In conclusion, I just want to thank you for your time and the effort it has taken you to teach me and everyone else how to do this. Just know that this class, for me, has been an inspiration followed and a major achievement. Whether I get a good grade or not, what I am taking away from this class is life altering for me. Thank you!
+In conclusion, for me, creating this site has been an inspiration followed and a major achievement. What I am taking away from this is life altering for me!
