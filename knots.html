@@ -10,25 +10,12 @@
 
         gtag('config', 'G-N5WS8C4XSV');
         </script>
-        <link rel="icon" href="./images/postakcreations-logo.png">
+        <link rel="icon" href="../images/postakcreations-logo.png">
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>"Postak Creations | Postak Creations Jewelry | Knots"</title>
-        <link rel="stylesheet" href="styles/style.css">
-        <style>
-            .parallax {
-            /* The image used */
-            background-image: url("./images/creation-background.jpg");
-            /* Set a specific height */
-            min-height: 500px; 
-            /* Create the parallax scrolling effect */
-            background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            }
-        </style>
+        <link rel="stylesheet" href="./styles/style.css">
     </head>
     <body class="parallax">
         <div id="content">
@@ -40,11 +27,6 @@
                 <a class="button" href="knots.html">Knots</a>
                 <a class="button" href="beads.html">Beads</a>
                 <a class="button" href="contact.html">Contact Us</a>
-            </div>
-            <div id="knots-page-collage">
-                <div id="knots-page-box">
-                    <img id="knots-page-img" src="images/knots_banner.jpg" alt="Postak Creations collage">
-                </div>
             </div>
             <main class="knots-page-grid">
                 <section class="knots-page-msg">
@@ -354,18 +336,6 @@
                       dots[slideIndex[no]-1].className += " active"  
                     }
                     </script>
-                    <script>
-                        window.onscroll = function() {myFunction()};  
-                        var navbar = document.getElementById("navbar");
-                        var sticky = navbar.offsetTop;  
-                        function myFunction() {
-                            if (window.pageYOffset >= sticky) {
-                            navbar.classList.add("sticky")
-                            } else {
-                            navbar.classList.remove("sticky");
-                            }
-                        }
-                    </script>
             </main>
             <footer>
                 <p>Postak Creations &copy; 2022 - Jordan Postak</p>
@@ -384,5 +354,6 @@
                 </div>
             </footer>
         </div>
+        <script src="js/navbarscroll.js" defer></script>
     </body>
 </html>

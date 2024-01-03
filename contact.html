@@ -16,19 +16,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>"Postak Creations | Postak Creations Jewelry | Beads"</title>
         <link rel="stylesheet" href="styles/style.css">
-        <style>
-            .parallax {
-            /* The image used */
-            background-image: url("./images/creation-background.jpg");
-            /* Set a specific height */
-            min-height: 500px; 
-            /* Create the parallax scrolling effect */
-            background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            }
-        </style>
     </head>
     <body class="parallax">
         <div id="content">
@@ -87,18 +74,6 @@
                             });
                     </script>  
                 </section>
-                <script>
-                    window.onscroll = function() {myFunction()};
-                    var navbar = document.getElementById("navbar");
-                    var sticky = navbar.offsetTop;
-                    function myFunction() {
-                        if (window.pageYOffset >= sticky) {
-                        navbar.classList.add("sticky")
-                        } else {
-                        navbar.classList.remove("sticky");
-                        }
-                    }
-                </script>
             </main>
             <footer>
                 <p>Postak Creations &copy; 2022 - Jordan Postak</p>
@@ -117,5 +92,6 @@
                 </div>
             </footer>
         </div>
+        <script src="js/navbarscroll.js" defer></script>
     </body>
 </html>

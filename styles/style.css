@@ -3,33 +3,50 @@ Any spaces in your font name should be replaced with a +.
 Fonts are separated by a & */
 @import url('https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon&family=Lato:ital,wght@0,400;0,700;1,400&display=swap');
 
-
+body{
+    margin: 0;
+}
+.parallax {
+    margin-top: 250px;
+    /* The image used */
+    background-image: url("../images/creation-background.jpg");
+    /* Set a specific height */
+    min-height: 800px; 
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
 #content{
     max-width: 1600px;
     margin: 0 auto;
 }
-.logo {
-    display: inline-block;
-}
-.logo_link {
-    display: inline-block;
-}
 #navbar {
-    overflow: hidden;
-    background-image: linear-gradient(to right, #023e8a,  #023e8a, #09e1f3);
-    color: white; 
-    display:block;
-    opacity: .9;
-    white-space: nowrap;
-}
-#navbar a {
+    position: fixed;
+    overflow: wrap;
     text-align: center;
-    color: white;
-    text-decoration: none;
-    margin: 50px;
-    vertical-align: middle;
+    justify-content: center;
+    background-image: linear-gradient(to right, #023e8a,  #023e8a, #09e1f3);
+    width: 100%;
+    max-width: 1600px;
+    color: white; 
+    display: flex;
+    opacity: .9;
+    margin-top: -250px;
     
 }
+#navbar a {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    margin: 3%;
+    transition: background-color 0.3s, transform 0.3s; /* Add smooth transitions */
+}
+
 .button {
     padding: 15px;
     text-align: center;
@@ -37,52 +54,39 @@ Fonts are separated by a & */
     border: 3px solid #09e1f3;
     border-radius: 5px;
     cursor: pointer;
+    background-color: #001794;
     box-shadow: 5px 5px 10px #1e272f;
+    transition: background-color 0.3s, transform 0.3s; /* Add smooth transitions */
 }
-.button:hover,
-.button:focus {
-  outline: none;
-  background: #fe9f00;
-  color: #001794;
-  font-size: 1.1em;
+
+#navbar a:hover,
+#navbar a:focus {
+    background: #fe9f00;
+    color: #001794;
+    transform: scale(1.1); /* Scale on hover */
 }
-.button:active{
-    outline: none;
+
+.button:active {
     background: #001794;
     color: #fe9f00;
     font-size: 1.1em;
+    transform: scale(1.1); /* Scale on active */
 }
 .sticky {
     position: fixed;
-    display: block;
-    width: 1600px;
+    display: flex;
+    width: 100%;
+    max-width: 1600px;
     z-index: 10;
-    margin-top: -35px;
-    
   }
-.sticky + .content {
-    padding-top: 30px;
-  }
-.sticky2 {
-    position: fixed;
-    display: block;
-    width: 1600px;
-    z-index: 10;
-    margin-top: -35px;
-    
-  }
-.sticky2 + .content {
-    padding-top: 30px;
-  }
+  #navbar.scroll-bg {
+    background: linear-gradient(to right, rgba(2, 62, 138, 0.5), rgba(2, 62, 138, 0.5), rgba(9, 225, 243, 0.5));
+}
 body {
     font-family: Georgia, serif, sans-serif;
     font-size: 25px;
 }
-#home-page-collage, #beads-page-collage, #knots-page-collage, #contact {
-    display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
-    margin-top: 35px;
-}
+
 #home-page-box, #knots-page-box, #beads-page-box{
     grid-column: 1/12;
     grid-row: 1/8;
@@ -110,8 +114,6 @@ body {
     grid-column-start: 1;
     grid-column-end: 11;
     border-radius: 25px;
-    margin: 50px;
-    margin-top: 50px;
     margin-bottom: 25px;
 
 }
@@ -301,7 +303,7 @@ button:focus {
 
 }
 .logo {
-    width: 200px;
+    width: 250px;
 }
 footer {
     background-image: linear-gradient(to right, #023e8a, #023e8a, #09e1f3);
@@ -451,16 +453,22 @@ label{
     }
 
 @media screen and (max-width: 900px) {
-#home-page-collage, .home-page-grid, .double-columns {
+.home-page-grid, .double-columns {
     display: block;
     height: auto;
 }    
+}
+#navbar{
+    position: relative;
 }
 .sticky {
     position:relative;
     display:list-item;
     width: 100%;
   }
+  #navbar.scroll-bg {
+    background: linear-gradient(to right, rgba(2, 62, 138, 1), rgba(2, 62, 138, 1), rgba(9, 225, 243, 1));
+}
 #navbar, footer {
     flex-direction: column;
     font-size: 15px;
@@ -468,9 +476,6 @@ label{
 #navbar a {
     display: block;
     padding: 15px;
-}
-#home-page-collage {
-    margin-top: 0;
 }
 #home-page-title-msg {
     margin-top: 0;
@@ -599,9 +604,6 @@ button:hover, button:focus{
     font-size: 8px;
     padding: 10px;
     margin: 10px;
-}
-#home-page-collage{
-    margin-top: 40px;
 }
 .logo {
     margin: 0px;
