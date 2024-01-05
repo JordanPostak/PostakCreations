@@ -1,13 +1,55 @@
-/* if you are using any Google fonts change the font names below to your fonts. 
-Any spaces in your font name should be replaced with a +. 
-Fonts are separated by a & */
 @import url('https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon&family=Lato:ital,wght@0,400;0,700;1,400&display=swap');
+
+:root {
+    /* headlines on a white background */
+    --headline-color-on-white: #023e8a;
+    
+    /* headlines on a colored background */  
+    --headline-color-on-color: #fc8211;
+
+    /* paragraph text on a white background */
+    --paragraph-color-on-white: #023e8a;
+    
+    /* paragraph text on a colored background */ 
+    --paragraph-color-on-color: #fffafa;
+
+    /* paragraph background color */ 
+    --paragraph-background-color: #0096c7;
+
+    /* navigation link color */ 
+    --nav-link-color: #fffafa;
+
+    /* navigation background color */ 
+    --nav-background-color: #023e8a;
+
+    /* navigation hover link color */ 
+    --nav-hover-link-color: #fc8211;
+
+    /* navigation hover background color */ 
+    --nav-hover-background-color: #0096c7;
+
+    --nav-button-color: #001794;
+
+    --nav-background-gradient: linear-gradient(to right, #023e8a, #023e8a, #09e1f3);
+
+    --box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7);
+    --box-shadow-hover: 8px 8px 15px rgba(0, 0, 0, 0.5);
+    --box-shadow-active: 3px 3px 8px rgba(0, 0, 0, 0.7);
+
+    --border-color: #00eaff;
+  
+    /* Fonts */
+    --heading-font: "IM Fell French Canon";
+    --paragraph-font: Lato, Helvetica, sans-serif;
+  
+  }
+
 
 body{
     margin: 0;
 }
 .parallax {
-    margin-top: 250px;
+    margin-top: 100px;
     /* The image used */
     background-image: url("../images/creation-background.jpg");
     /* Set a specific height */
@@ -27,13 +69,12 @@ body{
     overflow: wrap;
     text-align: center;
     justify-content: center;
-    background-image: linear-gradient(to right, #023e8a,  #023e8a, #09e1f3);
+    background-image: var(--nav-background-gradient);
     width: 100%;
     max-width: 1600px;
-    color: white; 
     display: flex;
-    opacity: .9;
-    margin-top: -250px;
+    margin-top: -100px;
+    padding: 10px;
     
 }
 #navbar a {
@@ -41,29 +82,59 @@ body{
     text-align: center;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: var(--nav-link-color);
+    border-radius: 5px;
     text-decoration: none;
-    margin: 3%;
-    transition: background-color 0.3s, transform 0.3s; /* Add smooth transitions */
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; 
 }
+.nav-links{
+    display: flex;
+    margin: 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+ul li{
+margin-left: 40px;
+margin-right: 40px;
+}
+.home-page-beads-background p {
+    color: white;
+    background-color:#023e8a;
+    padding: 25px;
+    border-radius: 25px;
+    box-shadow: 5px 5px 10px #1e272f;
+    margin: 25px auto;
+    text-align: center;
+}
+.home-page-beads-image {
+    width: 80%;
+}
+.home-page-knots-image {
+    width: 100%;
 
+}
+.logo {
+    width: 200px;
+}
 .button {
     padding: 15px;
     text-align: center;
     font: bold 0.8em Georgia, serif;
-    border: 3px solid #09e1f3;
+    border: 3px solid var(--border-color);
     border-radius: 5px;
     cursor: pointer;
-    background-color: #001794;
-    box-shadow: 5px 5px 10px #1e272f;
-    transition: background-color 0.3s, transform 0.3s; /* Add smooth transitions */
+    background-color: var(--nav-button-color);
+    box-shadow: var(--box-shadow);
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; 
 }
 
 #navbar a:hover,
 #navbar a:focus {
-    background: #fe9f00;
-    color: #001794;
-    transform: scale(1.1); /* Scale on hover */
+    background: var(--nav-hover-link-color);
+    color: var(--nav-button-color);
+    transform: scale(1.1);
+    box-shadow: var(--box-shadow-hover);
 }
 
 .button:active {
@@ -86,6 +157,9 @@ body {
     font-family: Georgia, serif, sans-serif;
     font-size: 25px;
 }
+main{
+    padding: 40px
+}
 
 #home-page-box, #knots-page-box, #beads-page-box{
     grid-column: 1/12;
@@ -99,7 +173,11 @@ body {
 }
 .home-page-title, .knots-page-title, .beads-page-title {
     color: #001794;
-    font-size: 2em;
+    font-size: 1.5em;
+    grid-column-start: 1;
+    grid-column-end: 11;
+    border-radius: 25px;
+    margin-bottom: 25px;
 }
 .home-page-grid {
     display: grid;
@@ -127,6 +205,15 @@ body {
     text-align: center;
 
 }
+h1 {
+    background-color:#023e8a;
+    color: #fe9f00;
+    border-radius: 25px;
+    padding: 20px;
+    box-shadow: 5px 5px 10px #1e272f;
+    text-align: center;
+}
+
 .home-page-background h2, .knots-page-msg h2, .beads-page-msg h2, .contact-msg h2{
     background-color:#023e8a;
     color: #fe9f00;
@@ -146,7 +233,7 @@ body {
     margin-right: 25px;
     border-radius: 25px;
 }
-.home-page-knots-background h1 {
+.home-page-knots-background h2 {
     background-color:#023e8a;
     color: #fe9f00;
     border-radius: 25px;
@@ -173,7 +260,7 @@ body {
     margin-left: 25px;
     border-radius: 25px;
 }
-.home-page-beads-background h1 {
+.home-page-beads-background h2 {
     background-color:#023e8a;
     color: #fe9f00;
     border-radius: 25px;
@@ -285,25 +372,6 @@ button:focus {
 }
 .moveDown {
         margin-top: 3em;
-}
-.home-page-beads-background p {
-    color: white;
-    background-color:#023e8a;
-    padding: 25px;
-    border-radius: 25px;
-    box-shadow: 5px 5px 10px #1e272f;
-    margin: 25px auto;
-    text-align: center;
-}
-.home-page-beads-image {
-    width: 80%;
-}
-.home-page-knots-image {
-    width: 100%;
-
-}
-.logo {
-    width: 250px;
 }
 footer {
     background-image: linear-gradient(to right, #023e8a, #023e8a, #09e1f3);
@@ -446,169 +514,175 @@ label{
   from {opacity: .4}
   to {opacity: 1}
 }
-/* On smaller screens, decrease text size */
+
+
+/* smaller screens */
 @media only screen and (max-width: 900px) {
     .prev, .next, .text {
         font-size: 11px
     }
+    .home-page-grid, .double-columns {
+        display: block;
+        height: auto;
+    }   
+    #navbar{
+        position: relative;
+    }
 
-@media screen and (max-width: 900px) {
-.home-page-grid, .double-columns {
-    display: block;
-    height: auto;
-}    
-}
-#navbar{
-    position: relative;
-}
-.sticky {
-    position:relative;
-    display:list-item;
-    width: 100%;
-  }
-  #navbar.scroll-bg {
-    background: linear-gradient(to right, rgba(2, 62, 138, 1), rgba(2, 62, 138, 1), rgba(9, 225, 243, 1));
-}
-#navbar, footer {
-    flex-direction: column;
-    font-size: 15px;
-}
-#navbar a {
-    display: block;
-    padding: 15px;
-}
-#home-page-title-msg {
-    margin-top: 0;
-}
-#home-page-title-msg h4 {
-    display: none;
-}
-.home-page-title {
-    font-size: 25px;
-    transform: rotate(23deg);
-}
-.home-page-background {
-    width: auto;
-    display: block;
-    margin: 0 auto;
-}
-.home-page-knots-background, .home-page-beads-background {
-    width: auto;
-    display: block;
-    margin: 15px;
-    margin-bottom: 20px;
-}
-footer {
-    margin-top: 25px;
-}
-.text {
-    color: #023e8a;
-    font-weight: normal;
-    font-size: 15px;
-    padding: 5px;
-  }
-  .slideshow-container1 h2, .slideshow-container2 h2, .slideshow-container3 h2,  .slideshow-container4 h2, .slideshow-container5 h2, .slideshow-container6 h2 {
-    font-size: 17px;
-    padding: 15px;
-    margin-bottom: -15px;
-}
-.numbertext {
-    margin-top: -10px;
-    margin-bottom: 20px;
-    font-size: 10px;
-    ;
-  }
-  .dot1, .dot2, .dot3, .dot4, .dot5, .dot6 {
-    height: 5px;
-    width: 5px;
-    margin-bottom: -35px;
-  }
-  .pictureframe {
-    height: 700px;
-    margin-top: 10px;
-}
-.slideshow-container1, .slideshow-container2, .slideshow-container3,  .slideshow-container4, .slideshow-container5, .slideshow-container6 {
-    padding: 15px;
-    margin: 15px;
-    height: 480px;
-}
-.prev {
-    margin-left: -15px;
-}
-.home-page-background, .knots-page-msg, .beads-page-msg, .contact-msg {
-    padding: 15px;
-    margin: 15px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    .sticky {
+        position:relative;
+        display:list-item;
+        width: 100%;
+    }
+    #navbar.scroll-bg {
+        background: linear-gradient(to right, rgba(2, 62, 138, 1), rgba(2, 62, 138, 1), rgba(9, 225, 243, 1));
+    }
+    #navbar, footer, ul{
+        flex-direction: column;
+        font-size: 15px;
+    }
+    #navbar ul li {
+        display: block;
+        padding: 15px;
+        width: 200px;
+    }
+    main{
+        padding: 0px
+    }
+    h1{
+        margin: 20px;
+    }
+    #home-page-title-msg {
+        margin-top: 0;
+    }
+    #home-page-title-msg h4 {
+        display: none;
+    }
+    .home-page-title {
+        font-size: 25px;
+    }
+    .home-page-background {
+        width: auto;
+        display: block;
+        margin: 0 auto;
+    }
+    .home-page-knots-background, .home-page-beads-background {
+        width: auto;
+        display: block;
+        margin: 15px;
+        margin-bottom: 20px;
+    }
+    footer {
+        margin-top: 25px;
+    }
+    .text {
+        color: #023e8a;
+        font-weight: normal;
+        font-size: 15px;
+        padding: 5px;
+    }
+    .slideshow-container1 h2, .slideshow-container2 h2, .slideshow-container3 h2,  .slideshow-container4 h2, .slideshow-container5 h2, .slideshow-container6 h2 {
+        font-size: 17px;
+        padding: 15px;
+        margin-bottom: -15px;
+    }
+    .numbertext {
+        margin-top: -10px;
+        margin-bottom: 20px;
+        font-size: 10px;
+        ;
+    }
+    .dot1, .dot2, .dot3, .dot4, .dot5, .dot6 {
+        height: 5px;
+        width: 5px;
+        margin-bottom: -35px;
+    }
+    .pictureframe {
+        height: 700px;
+        margin-top: 10px;
+    }
+    .slideshow-container1, .slideshow-container2, .slideshow-container3,  .slideshow-container4, .slideshow-container5, .slideshow-container6 {
+        padding: 15px;
+        margin: 15px;
+        height: 480px;
+    }
+    .prev {
+        margin-left: -15px;
+    }
+    .home-page-background, .knots-page-msg, .beads-page-msg, .contact-msg {
+        padding: 15px;
+        margin: 15px;
+        margin-top: 20px;
+        margin-bottom: 20px;
 
-}
-.home-page-background p, .knots-page-msg p, .beads-page-msg p, .contact-msg p{
-    margin: 20px;
-    text-align: center;
-    font-size: 15px;
+    }
+    .home-page-background p, .knots-page-msg p, .beads-page-msg p, .contact-msg p{
+        margin: 20px;
+        text-align: center;
+        font-size: 15px;
 
-}
-.home-page-background h2, .knots-page-msg h2, .beads-page-msg h2, .contact-msg h2{
-    padding: 15px;
-    width: 75%;
-    margin: 25px auto;
-    font-size: 20px;
-} 
-.home-page-knots-background h1{
-    font-size: 20px;
-}
-.home-page-knots-background p{
-    font-size: 15px;
-}
-.home-page-beads-background h1{
-    font-size: 20px;
-}
-.home-page-beads-background p{
-    font-size: 15px;
-}
-#name{
-    width: 150px;
-    font-size: 15px;
-}
-#name{
-    width: 150px;
-    font-size: 15px;
-}
-#mail{
-    width: 150px;
-    font-size: 15px;
-}
-#msg{
-    width: 150px;
-    font-size: 15px;
-}
-.button{
-    font-size: 20px;
-}
-.button:hover,
-.button:focus{
-    font-size: 25px;
-}
-.button:active{
-    color: #fe9f00;
-    background: #001794;
-    font-size: 25px;
-}
-button{
-    font-size: 8px;
-}
-button:hover, button:focus{
-    font-size: 10px;
-}
-#feedback{
-    font-size: 8px;
-    padding: 10px;
-    margin: 10px;
-}
-.logo {
-    margin: 0px;
-}
-label{
-    font-size: 15px;
-}
+    }
+    .home-page-background h2, .knots-page-msg h2, .beads-page-msg h2, .contact-msg h2{
+        padding: 15px;
+        width: 75%;
+        margin: 25px auto;
+        font-size: 20px;
+    } 
+    .home-page-knots-background h1{
+        font-size: 20px;
+    }
+    .home-page-knots-background p{
+        font-size: 15px;
+    }
+    .home-page-beads-background h1{
+        font-size: 20px;
+    }
+    .home-page-beads-background p{
+        font-size: 15px;
+    }
+    #name{
+        width: 150px;
+        font-size: 15px;
+    }
+    #name{
+        width: 150px;
+        font-size: 15px;
+    }
+    #mail{
+        width: 150px;
+        font-size: 15px;
+    }
+    #msg{
+        width: 150px;
+        font-size: 15px;
+    }
+    .button{
+        font-size: 20px;
+    }
+    .button:hover,
+    .button:focus{
+        font-size: 25px;
+    }
+    .button:active{
+        color: #fe9f00;
+        background: #001794;
+        font-size: 25px;
+    }
+    button{
+        font-size: 8px;
+    }
+    button:hover, button:focus{
+        font-size: 10px;
+    }
+    #feedback{
+        font-size: 8px;
+        padding: 10px;
+        margin: 10px;
+    }
+    .logo {
+        margin: 0px;
+    }
+    label{
+        font-size: 15px;
+    }
 }
