@@ -160,13 +160,8 @@ body {
 main{
     padding: 40px
 }
-.hidden {
-    height: 125px;
-}
-.unhidden {
-    height: 1000px;
-}
 #dropdown {
+    height: 125px;
     overflow: hidden;
     transition: height 0.6s ease-in-out
 }
@@ -711,13 +706,8 @@ label{
     label{
         font-size: 15px;
     }
-    .hidden {
-        height: 100px;
-    }
-    .unhidden {
-        height: 1000px;
-    }
     #dropdown {
+        height: 100px;
         overflow: hidden;
         transition: height 0.6s ease-in-out
     }
