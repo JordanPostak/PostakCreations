@@ -32,7 +32,7 @@
 
     --nav-background-gradient: linear-gradient(to right, #023e8a, #023e8a, #09e1f3);
 
-    --body-gradient: linear-gradient(to right, rgba(196, 224, 247, .7), #09e1f3, rgba(196, 224, 247, .7));
+    --body-gradient: linear-gradient(to right, rgba(255, 255, 255, 0.7), #00eaff, rgba(255, 255, 255, 0.7));
 
     --box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7);
     --box-shadow-hover: 8px 8px 15px rgba(0, 0, 0, 0.5);
@@ -49,19 +49,14 @@
 
 body{
     margin: 0;
-}
-.parallax {
     margin-top: 100px;
-    /* The image used */
     background-image: url("../images/creation-background.jpg");
-    /* Set a specific height */
     min-height: 800px; 
-    /* Create the parallax scrolling effect */
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    }
+}
 #content{
     max-width: 1600px;
     margin: 0 auto;
