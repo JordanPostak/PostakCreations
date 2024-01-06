@@ -5,7 +5,7 @@
     --headline-color-on-white: #023e8a;
     
     /* headlines on a colored background */  
-    --headline-color-on-color: #fc8211;
+    --headline-color-on-color: #ff7b00;
 
     /* paragraph text on a white background */
     --paragraph-color-on-white: #023e8a;
@@ -14,7 +14,7 @@
     --paragraph-color-on-color: #fffafa;
 
     /* paragraph background color */ 
-    --paragraph-background-color: #0096c7;
+    --paragraph-background-color: #023e8a;
 
     /* navigation link color */ 
     --nav-link-color: #fffafa;
@@ -31,6 +31,8 @@
     --nav-button-color: #001794;
 
     --nav-background-gradient: linear-gradient(to right, #023e8a, #023e8a, #09e1f3);
+
+    --body-gradient: linear-gradient(to right, rgba(196, 224, 247, .7), #09e1f3, rgba(196, 224, 247, .7));
 
     --box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7);
     --box-shadow-hover: 8px 8px 15px rgba(0, 0, 0, 0.5);
@@ -99,11 +101,11 @@ margin-left: 40px;
 margin-right: 40px;
 }
 .home-page-beads-background p {
-    color: white;
-    background-color:#023e8a;
+    color: var(--paragraph-color-on-color);
+    background-color:var(--paragraph-background-color);
     padding: 25px;
     border-radius: 25px;
-    box-shadow: 5px 5px 10px #1e272f;
+    box-shadow: var(--box-shadow);
     margin: 25px auto;
     text-align: center;
 }
@@ -120,7 +122,7 @@ margin-right: 40px;
 .button {
     padding: 15px;
     text-align: center;
-    font: bold 0.8em Georgia, serif;
+    font: bold 0.8em var(--heading-font);
     border: 3px solid var(--border-color);
     border-radius: 5px;
     cursor: pointer;
@@ -128,20 +130,18 @@ margin-right: 40px;
     box-shadow: var(--box-shadow);
     transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; 
 }
-
 #navbar a:hover,
 #navbar a:focus {
     background: var(--nav-hover-link-color);
-    color: var(--nav-button-color);
+    color: var(--border-color);
     transform: scale(1.1);
     box-shadow: var(--box-shadow-hover);
 }
-
-.button:active {
-    background: #001794;
-    color: #fe9f00;
-    font-size: 1.1em;
-    transform: scale(1.1); /* Scale on active */
+#navbar a:active {
+    background: var(--nav-hover-background-color);
+    color: var(--nav-button-color);
+    transform: scale(.9);
+    box-shadow: var(--box-shadow-active);
 }
 .sticky {
     position: fixed;
@@ -151,16 +151,49 @@ margin-right: 40px;
     z-index: 10;
   }
   #navbar.scroll-bg {
-    background: linear-gradient(to right, rgba(2, 62, 138, 0.5), rgba(2, 62, 138, 0.5), rgba(9, 225, 243, 0.5));
+    background: var(--body-gradient);
 }
 body {
-    font-family: Georgia, serif, sans-serif;
+    font-family: var(--paragraph-font);
     font-size: 25px;
 }
 main{
     padding: 40px
 }
-
+.hidden {
+    height: 125px;
+}
+.unhidden {
+    height: 1000px;
+}
+#dropdown {
+    overflow: hidden;
+    transition: height 0.6s ease-in-out
+}
+.arrow {
+    display: inline-block;
+    margin-left: 15px;
+    font-size: 1rem;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+.rotate180 {
+    transform: rotate(180deg);
+}
+#dropdown-toggle {
+    box-shadow: var(--box-shadow);
+    margin-bottom: 40px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+#dropdown-toggle:hover {
+    box-shadow: var(--box-shadow-hover);
+    cursor: pointer;
+    transform: scale(1.1);
+}
+#dropdown-toggle:active {
+    box-shadow: var(--box-shadow-active);
+    cursor: pointer;
+    transform: scale(.9);
+}
 #home-page-box, #knots-page-box, #beads-page-box{
     grid-column: 1/12;
     grid-row: 1/8;
@@ -172,7 +205,7 @@ main{
     margin-top: -25px;
 }
 .home-page-title, .knots-page-title, .beads-page-title {
-    color: #001794;
+    color: var(--headline-color-on-color);
     font-size: 1.5em;
     grid-column-start: 1;
     grid-column-end: 11;
@@ -187,7 +220,7 @@ main{
     display: block;
 }
 .home-page-background, .knots-page-msg, .beads-page-msg, .contact-msg {
-    background-image: linear-gradient(to right, rgba(196, 224, 247, .7), #09e1f3, rgba(196, 224, 247, .7));
+    background-image: var(--body-gradient);
     padding: 20px;
     grid-column-start: 1;
     grid-column-end: 11;
@@ -196,37 +229,37 @@ main{
 
 }
 .home-page-background p, .knots-page-msg p, .beads-page-msg p, .contact-msg p{
-    color: white;
-    background-color:#023e8a;
+    color: var(--paragraph-color-on-color);
+    background-color:var(--paragraph-background-color);
     padding: 25px;
     border-radius: 25px;
-    box-shadow: 5px 5px 10px #1e272f;
+    box-shadow: var(--box-shadow);
     margin: 25px auto;
     text-align: center;
 
 }
 h1 {
-    background-color:#023e8a;
-    color: #fe9f00;
+    background-color:var(--paragraph-background-color);
+    color: var(--headline-color-on-color);
     border-radius: 25px;
     padding: 20px;
-    box-shadow: 5px 5px 10px #1e272f;
+    box-shadow: var(--box-shadow);
     text-align: center;
 }
 
 .home-page-background h2, .knots-page-msg h2, .beads-page-msg h2, .contact-msg h2{
-    background-color:#023e8a;
-    color: #fe9f00;
+    background-color:var(--paragraph-background-color);
+    color: var(--headline-color-on-color);
     border-radius: 25px;
     padding: 20px;
     width: 50%;
     margin: 25px auto;
-    box-shadow: 5px 5px 10px #1e272f;
+    box-shadow: var(--box-shadow);
     text-align: center;
     
 } 
 .home-page-knots-background {
-    background-image: linear-gradient(to right, rgba(196, 224, 247, .7), #09e1f3, rgba(196, 224, 247, .7));
+    background-image: var(--body-gradient);
     padding: 20px;
     grid-column: 1/6;
     margin: 50px;
@@ -234,26 +267,26 @@ h1 {
     border-radius: 25px;
 }
 .home-page-knots-background h2 {
-    background-color:#023e8a;
-    color: #fe9f00;
+    background-color:var(--paragraph-background-color);
+    color: var(--headline-color-on-color);
     border-radius: 25px;
     padding: 20px;
     width: 50%;
-    box-shadow: 5px 5px 10px #1e272f;
+    box-shadow: var(--box-shadow);
     margin: 25px auto;
     text-align: center;
 }
 .home-page-knots-background p {
-    color:white;
-    background-color:#023e8a;
+    color:var(--paragraph-color-on-color);
+    background-color:var(--paragraph-background-color);
     padding: 25px;
     border-radius: 25px;
-    box-shadow: 5px 5px 10px #1e272f;
+    box-shadow: var(--box-shadow);
     margin: 25px auto;
     text-align: center;
 }
 .home-page-beads-background {
-    background-image: linear-gradient(to right, rgba(196, 224, 247, .7), #09e1f3, rgba(196, 224, 247, .7));
+    background-image: var(--body-gradient);
     padding: 20px;
     grid-column: 6/11;
     margin: 50px;
@@ -261,24 +294,22 @@ h1 {
     border-radius: 25px;
 }
 .home-page-beads-background h2 {
-    background-color:#023e8a;
-    color: #fe9f00;
+    background-color:var(--paragraph-background-color);
+    color: var(--headline-color-on-color);
     border-radius: 25px;
     padding: 20px;
     width: 50%;
-    box-shadow: 5px 5px 10px #1e272f;
+    box-shadow: var(--box-shadow);
     margin: 25px auto;
     text-align: center;
 }
 form {
-    /* Center the form on the page */
     margin: auto;
     width: auto;
     text-align: center;
-    /* Form outline */
-    background-color: #023e8a;
+    background-color: var(--paragraph-background-color);
     padding: 35px;
-    box-shadow: 5px 5px 10px #1e272f;
+    box-shadow: var(--box-shadow);
     border-radius: 25px;
 }
     
@@ -293,72 +324,65 @@ form li + li {
 }
     
 label {
-    /* Uniform size & alignment */
     display:inline-block;
     width: 90px;
     text-align: right;
-    font: 1em Georgia, serif;
-    color: #fe9f00;
+    font: 1em var(--paragraph-font);
+    color: var(--headline-color-on-color);
 }
     
 input,
 textarea {
-    /* To make sure that all text fields have the same font settings
-        By default, textareas have a monospace font */
-    font: 1em Georgia, serif;
+    font: 1em var(--paragraph-font);
     width: 20%;
     border-radius: 5px;
-    /* Uniform text field size */
     width: 300px;
     box-sizing: border-box;
-    
-    /* Match form field borders */
-    border: 2px solid #fe9f00;
+    border: 2px solid var(--headline-color-on-color);
 }
     
 input:focus,
 textarea:focus {
-    /* Additional highlight for focused elements */
-    border-color: #fe9f00;
+    border-color: var(--nav-hover-link-color);
 }
     
 textarea {
-    /* Align multiline text fields with their labels */
     vertical-align: top;
-    
-    /* Provide space to type some text */
     height: 5em;
 }
-button,
+form button,
 input,
 select,
 textarea {
       font-family: inherit;
       font-size: 100%;
-      box-shadow: 5px 5px 10px #1e272f;
+      box-shadow: var(--box-shadow);
 }
-button {
-        padding: 15px;
-        font: bold 0.8em Georgia, serif;
-        border: 3px solid #09e1f3;
-        border-radius: 5px;
-        background: none;
-        cursor: pointer;
-        transform: rotate(-1.5deg);
-        color: #09e1f3;
-        box-shadow: 5px 5px 10px #1e272f;
-}
-button:after {
+form button:after {
         content: " >>>";
 }
-button:hover,
-button:focus {
-      outline: none;
-      background: #fe9f00;
-      color: #001794;
-      font-size: 1.1em;
-      transform: rotate(1.5deg)
+form button,
+form button {
+    padding: 5px;
+    border: 3px solid var(--border-color);
+    border-radius: 5px;
+    background: var(--nav-button-color);
+    color: var(--nav-link-color);
+    font-size: 1.1em;
+    transform: rotate(-1.5deg);
+    transition: transform 0.5s, box-shadow 0.5s, background-color 0.5s;
 }
+form button:hover,
+form button:focus {
+      outline: none;
+      background: var(--nav-background-color);
+      color: var(--nav-link-color);
+      transform: rotate(1.7deg) scale(1.1);
+      box-shadow: var(--box-shadow-hover);
+      background-color: var(--nav-hover-link-color);
+      color: var(--border-color);
+}
+
 #feedback {
         background-color: #fe9f00;
         color: #001794;
@@ -367,7 +391,6 @@ button:focus {
         padding: 20px;
         margin: 40px;
         border-radius: 25px;
-        /* make this element invisible until we are ready for it */
         display: none;      
 }
 .moveDown {
@@ -640,6 +663,9 @@ label{
     .home-page-beads-background p{
         font-size: 15px;
     }
+    .unhidden {
+        height: 750px;
+    }
     #name{
         width: 150px;
         font-size: 15px;
@@ -684,5 +710,8 @@ label{
     }
     label{
         font-size: 15px;
+    }
+    .hidden {
+        height: 100px;
     }
 }
