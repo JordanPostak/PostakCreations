@@ -50,7 +50,7 @@ html{
     background-image: url("../images/creation-background.jpg");
     min-height: 100vh;
     background-attachment: fixed;
-    background-position: center;
+    background-position: cover;
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #272baf;
