@@ -1,7 +1,7 @@
 window.addEventListener('scroll', function() {
   var navbar = document.getElementById('navbar');
   var scrollPosition = window.scrollY;
-  var sticky = navbar.offsetTop;
+  var sticky = navbar.offsetTop - 100;
 
   // Add a class for sticky navbar
   if (scrollPosition >= sticky) {
