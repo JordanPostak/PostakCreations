@@ -47,11 +47,11 @@
   }
 
   html {
+    background-color: var(--nav-button-color);
     background-image: url("../images/creation-background.jpg");
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: var(--nav-button-color);
     background-position: top right;
 }
   body {
