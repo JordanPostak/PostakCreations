@@ -52,7 +52,7 @@ html{
     background-image: url("../images/creation-background.jpg");
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     background-color: var(--nav-button-color);
 }
   body {
