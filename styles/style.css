@@ -708,5 +708,6 @@ label{
     }
     html {
         background-attachment: fixed;
+        height: auto;
     }
 }
