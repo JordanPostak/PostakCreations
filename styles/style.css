@@ -28,7 +28,7 @@
     /* navigation hover background color */ 
     --nav-hover-background-color: #0096c7;
 
-    --nav-button-color: #001794;
+    --nav-button-color: #2a398f;
 
     --nav-background-gradient: linear-gradient(to right, #023e8a, #023e8a, #09e1f3);
 
@@ -52,8 +52,8 @@ html{
     background-image: url("../images/creation-background.jpg");
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-size: cover;
-    background-color: #272baf;
+    background-size: contain;
+    background-color: var(--nav-button-color);
 }
   body {
     padding: 0;
