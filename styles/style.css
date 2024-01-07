@@ -52,7 +52,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-color: var(--nav-button-color);
-    background-position: top;
+    background-position: top right;
 }
   body {
     padding: 0;
