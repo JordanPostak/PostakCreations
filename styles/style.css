@@ -47,6 +47,8 @@
   }
 
 html{
+    margin: 0;
+    padding: 0;
     background-image: url("../images/creation-background.jpg");
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -54,6 +56,7 @@ html{
     background-color: #272baf;
 }
   body {
+    padding: 0;
     margin: 0;
     margin-top: 100px;
 }
