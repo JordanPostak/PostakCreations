@@ -231,6 +231,7 @@ main{
 
 }
 h1 {
+    font-size: 2rem;
     background-color:var(--paragraph-background-color);
     color: var(--headline-color-on-color);
     border-radius: 25px;
