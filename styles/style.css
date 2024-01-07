@@ -707,8 +707,6 @@ label{
         transition: height 0.6s ease-in-out
     }
     html {
-        background-attachment: scroll;
-        background-size:contain;
-        background-repeat: repeat-y;
+        background-attachment: fixed;
     }
 }
