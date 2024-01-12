@@ -524,6 +524,65 @@ footer p a:hover {
 label{
     font-size: 20px;
 }
+.slideshow {
+    background-image: var(--body-gradient);
+    border-radius: 25px;
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+    grid-column-start: 1;
+    grid-column-end: 11;
+    text-align: center;
+    justify-content: center;
+    padding: 15px;
+}
+.slideshow h2 {
+    font-size: 2rem;
+    background-color:var(--paragraph-background-color);
+    color: var(--headline-color-on-color);
+    border-radius: 25px;
+    padding: 20px;
+    box-shadow: var(--box-shadow);
+    text-align: center;
+}
+.slideshow h3 {
+    font-size: 1.5rem;
+    background-color:var(--paragraph-background-color);
+    color: var(--headline-color-on-color);
+    border-radius: 25px;
+    padding: 20px;
+    box-shadow: var(--box-shadow);
+    text-align: center;
+}
+
+.slideshow p {
+    font-size: 1rem;
+    color:var(--paragraph-color-on-color);
+    background-color:var(--paragraph-background-color);
+    padding: 25px;
+    border-radius: 25px;
+    box-shadow: var(--box-shadow);
+    margin: 25px auto;
+    text-align: center;
+}
+
+.slideshow-container {
+    display: flex;
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+.slideshow-container img{
+    width: 250px;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+}
+.slideshow-container a{
+    text-decoration: none;
+}
 @-webkit-keyframes fade {
   from {opacity: .4}
   to {opacity: 1}
@@ -546,7 +605,11 @@ label{
     #navbar{
         position: relative;
     }
-
+    .slideshow {
+        margin-left: 15px;
+        margin-right: 15px;
+        width: 85%;
+    }
     .sticky {
         position:relative;
         display:list-item;
@@ -599,7 +662,7 @@ label{
         font-size: 15px;
         padding: 5px;
     }
-    .slideshow-container1 h2, .slideshow-container2 h2, .slideshow-container3 h2,  .slideshow-container4 h2, .slideshow-container5 h2, .slideshow-container6 h2 {
+    .slideshow-container1 h2, .slideshow-container2 h2, .slideshow-container3 h2,  .slideshow-container4 h2, .slideshow-container5 h2, .slideshow-container6 h2, .slideshow-container h2{
         font-size: 17px;
         padding: 15px;
         margin-bottom: -15px;
